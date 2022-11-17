@@ -1,6 +1,6 @@
-# Nuxt 3 Minimal Starter
+# alone-blog
 
-Look at the [nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.
+nuxt3+tailwindcss快速搭建个人博客、门户网站、企业官网
 
 ## Setup
 
