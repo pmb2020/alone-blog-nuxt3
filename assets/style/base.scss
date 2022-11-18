@@ -1,0 +1,45 @@
+@media (min-width:1536px) {
+	.my-container{
+		max-width: 1310px;
+	}
+}
+@media (min-width:1280px) {
+	.my-container{
+		max-width: 1280px;
+	}
+}
+
+@media (min-width:1024px) {
+	.my-container{
+		max-width: 1024px;
+	}
+}
+
+@media (min-width:768px) {
+	.my-container{
+		max-width: 768px;
+	}
+}
+@media (min-width:640px) {
+	.my-container{
+		max-width: 640px;
+	}
+}
+
+body{	
+	background-color: #ecf0f4;
+}
+
+.new-title{
+	font-weight: bold;
+	font-size: 1.5rem;
+	color: #333;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+	margin-bottom: 1rem;
+	cursor: pointer;
+}
+.new-title:hover{
+	color: $primary-color;
+}
