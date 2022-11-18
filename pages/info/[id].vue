@@ -2,6 +2,7 @@
 	<div>
 		我的id是
 		<p>{{ $route.params.id }}</p>
+		<AlonePagination />
 	</div>
 </template>
 
