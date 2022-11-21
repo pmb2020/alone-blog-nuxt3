@@ -37,6 +37,7 @@
 	const navClick = (index) => {
 		localStorage.setItem('navIndex', index)
 		navIndex.value = index
+		isCollapse.value = true
 	}
 </script>
 
