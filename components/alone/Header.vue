@@ -19,7 +19,7 @@
 		]},
 		{name:'解决方案',link:'/'},
 		{name:'用户案例',link:'/'},
-		{name:'新闻中心',link:'/'},
+		{name:'新闻中心',link:'/news'},
 		{name:'关于我们',link:'/about'},
 	])
 </script>
