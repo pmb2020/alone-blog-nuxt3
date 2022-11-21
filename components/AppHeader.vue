@@ -26,6 +26,7 @@
 
 <style lang="scss">
 	.header {
+		position: relative;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
