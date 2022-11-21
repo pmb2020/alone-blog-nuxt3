@@ -38,4 +38,7 @@
 		width: 100%;
 		height: $header-height;
 	}
+	.header-white{
+		height: $header-height
+	}
 </style>
