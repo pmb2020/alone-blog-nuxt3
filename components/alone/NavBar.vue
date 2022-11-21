@@ -1,5 +1,5 @@
 <template>
-	<nav>
+	<nav class="nav-bar">
 		<ul class="nav">
 			<li v-for="(nav,index) in data" :key="index">
 				<div class="nav-item">
@@ -17,12 +17,20 @@
 				</div>
 			</li>
 		</ul>
+		<!-- 移动端 -->
+		<ul class="nav-m" :class="{'collapse':isCollapse}">
+			<li v-for="(nav,index) in data" :key="index">
+				<nuxt-link  @click="navClick(index)" :class="{'active':navIndex==index}" :to="nav.link">{{nav.name}}</nuxt-link>
+			</li>
+		</ul>
+		<button @click="isCollapse ? isCollapse=false : isCollapse=true">三</button>
 	</nav>
 </template>
 
 <script setup>
 	const {data} = defineProps(['data'])
 	const navIndex = ref(0)
+	const isCollapse = ref(true)
 	onMounted(() => {
 		navIndex.value = localStorage.getItem('navIndex') || 0
 	})
@@ -33,12 +41,52 @@
 </script>
 
 <style lang="scss" scoped>
+	$header-height: 80px;
+	@media (max-width:576px) {
+		.nav-bar{
+			.nav{
+				display: none !important;
+			}
+			.nav-m{
+				display: block !important;
+			}
+			button{
+				display: block !important;
+			}
+		}
+	}
+	.nav-m{
+		position: absolute;
+		z-index: 99;
+		background-color: #fff;
+		left: 0;
+		right: 0;
+		top: $header-height;
+		padding: 1rem;
+		overflow: hidden;
+		a{
+			padding: 0.8rem 1rem;
+			display: inline-block;
+		}
+		.active{
+			color: $primary-color;
+		}
+	}
+	.nav-bar{
+		.nav-m{
+			display: none;
+		}
+		button{
+			display: none;
+		}
+	}
+	
 	.nav {
 		position: relative;
 		display: flex;
 		width: 100%;
-		height: 80px;
-		line-height: 80px;
+		height: $header-height;
+		line-height: $header-height;
 		.nav-item {
 			position: relative;
 			margin: 0 20px;
@@ -85,7 +133,7 @@
 		// 下拉菜单
 		.dropdown-content {
 			position: absolute;
-			top: 80px; // 为导航栏高度
+			top: $header-height; // 为导航栏高度
 			left: 0; // 设置为0, 不然会直接定位到父元素下方
 			// width: 300px;
 			height: 0; // 下拉初始高度
