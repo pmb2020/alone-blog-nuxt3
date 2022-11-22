@@ -5,7 +5,7 @@
 			<Meta name="description" :content="title" />
 			<!-- <Style type="text/css" children="body { background-color: green; }" /> -->
 		</Head>
-		<AloneBanner :data='bannerList' />
+		<AloneBanner class="h-44 md:h-auto" :data='bannerList' />
 		<!-- 新闻中心 -->
 		<div class="p-12" style="background-color: #fff;">
 			<section class="al-container">
@@ -76,7 +76,7 @@
 </template>
 
 <script setup>
-	const title = ref('alone-admin企业官网')
+	const title = ref('VAA先锋音讯企业官网')
 	const bannerList = ref([{
 			title: '这是一个title',
 			image: 'http://www.pioneerw.com/res/images/banner/213525321.jpg'

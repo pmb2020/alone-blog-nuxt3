@@ -1,6 +1,6 @@
 <template>
 	<div class="al-banner">
-		<swiper class="swiper" :style="{height:height+'px'}" :autoplay="{ delay: 5000,}" :pagination="{ clickable: true, }" :navigation="true"
+		<swiper class="swiper" :autoplay="{ delay: 5000,}" :pagination="{ clickable: true, }" :navigation="true"
 			:modules="modules">
 			<swiper-slide v-for="(banner,index) in data" :key="index">
 				<img :src="banner.image" :title="banner.title" alt="">
@@ -16,12 +16,12 @@
 	import "swiper/css/navigation";
 	import {Autoplay,Pagination,Navigation} from "swiper";
 	const modules = ref([Autoplay, Pagination, Navigation])
-	const {data,height='300'} = defineProps(['data','height'])
-	console.log(height)
+	const {data} = defineProps(['data'])
 </script>
 <style lang="scss">
 	.swiper {
 		width: 100%;
+		height: 100%;
 	}
 	
 	.swiper-slide {
