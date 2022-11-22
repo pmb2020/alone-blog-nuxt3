@@ -3,7 +3,7 @@
 		<Head>
 			<Title>{{title}}</Title>
 			<Meta name="description" :content="title" />
-			<Style type="text/css" children="body { background-color: green; }" />
+			<!-- <Style type="text/css" children="body { background-color: green; }" /> -->
 		</Head>
 		<AloneBanner :data='bannerList' />
 		<!-- 新闻中心 -->
