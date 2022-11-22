@@ -7,13 +7,13 @@
 			</div>
 			<div class="mt-10">
 				<ul>
-					<li class="flex mb-20" v-for="(newsItem,index) in newsList" :key="index">
-						<div class="w-1/4">
+					<li class="md:flex mb-16" v-for="(newsItem,index) in newsList" :key="index">
+						<div class="md:w-1/4 mb-3">
 							<nuxt-link :to="'/news/'+newsItem.id">
-								<img class="rounded-lg w-full h-60" :title="newsItem.title" :src="newsItem.image" >
+								<img class="rounded-lg w-full h-56" :title="newsItem.title" :src="newsItem.image" >
 							</nuxt-link>
 						</div>
-						<div class="w-3/4 ml-10">
+						<div class="md:w-3/4 md:ml-10">
 							<h3 class="new-title">
 								<nuxt-link :to="'/news/'+newsItem.id">{{newsItem.title}}</nuxt-link>
 							</h3>
@@ -69,12 +69,7 @@
 </script>
 
 <style lang="scss">
-	.news-top{
-		width: 100%;
-		height: $page-top-item-height;
-		background-image: url("~/assets/images/bg-top.png");
-		background-size: 100% 100%;
-		display: flex;
-		align-items: center;
+	.news{
+		background-color: #fff;
 	}
 </style>

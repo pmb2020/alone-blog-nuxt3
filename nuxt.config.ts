@@ -29,6 +29,12 @@ export default defineNuxtConfig({
 	
 					'2xl': '1536px',
 					// => @media (min-width: 1536px) { ... }
+				},
+				extend: {
+					height: {
+						'100': '25rem',
+						'104': '26rem'
+					}
 				}
 			}
 		}
