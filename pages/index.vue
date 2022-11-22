@@ -3,7 +3,7 @@
 		<Head>
 			<Title>{{title}}</Title>
 			<Meta name="description" :content="title" />
-			<Style type="text/css" children="body { background-color: green; }" />
+			<!-- <Style type="text/css" children="body { background-color: green; }" /> -->
 		</Head>
 		<AloneBanner :data='bannerList' />
 		<p class="text-3xl md:text-green-500 m-20">这是nuxt3+tailwindcss3新项目</p>
