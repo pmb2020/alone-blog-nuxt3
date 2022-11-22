@@ -12,7 +12,7 @@
 				<div class="flex justify-between mb-6">
 					<div>
 						<h2 class="md:text-4xl md:mb-2" style="color: #333;font-weight: 600;">新闻中心</h2>
-						<p class="hidden md:block text-xs md:text-3xl" style="font-style: italic;color: #d6dbe4;">NEWS CENTER</p>
+						<p class="hidden md:block text-xs md:text-2xl" style="font-style: italic;color: #d6dbe4;">NEWS CENTER</p>
 					</div>
 					<div class="flex items-center">
 						<div class="bar"></div>
@@ -39,39 +39,10 @@
 				</div>
 			</section>
 		</div>
+		<!-- 行业解决方案 -->
+		<PageSolution />
 		<!-- 产品中心 -->
-		<section class="al-container mx-auto mt-12">
-			<div class="flex justify-between mb-10">
-				<div>
-					<h2 class="text-4xl mb-2" style="color: #333;font-weight: 600;">产品中心</h2>
-					<p style="font-style: italic;color: #d6dbe4;font-size: 18px;">PRODUCT CENTER</p>
-				</div>
-				<div class="flex items-center">
-					<div class="bar"></div>
-					<p class="text-lg text-slate-400">先锋音讯16年品质保证，值得您信赖的伙伴</p>
-				</div>
-			</div>
-			<div class="grid grid-cols-3 gap-10">
-				<div>
-					<img src="http://www.pioneerw.com/html/ipDianHua/3.jpg" alt="">
-				</div>
-				<div>
-					<img src="http://www.pioneerw.com/html/ipDianHua/3.jpg" alt="">
-				</div>
-				<div>
-					<img src="http://www.pioneerw.com/html/ipDianHua/3.jpg" alt="">
-				</div>
-				<div>
-					<img src="http://www.pioneerw.com/html/ipDianHua/3.jpg" alt="">
-				</div>
-				<div>
-					<img src="http://www.pioneerw.com/html/ipDianHua/3.jpg" alt="">
-				</div>
-				<div>
-					<img src="http://www.pioneerw.com/html/ipDianHua/3.jpg" alt="">
-				</div>
-			</div>
-		</section>
+		<PageProduct />
 	</div>
 </template>
 
