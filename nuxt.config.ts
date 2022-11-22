@@ -4,10 +4,10 @@ export default defineNuxtConfig({
 	app: {
 		head: {
 			charset: 'utf-8',
-			title: 'nuxt3项目实战之alone-blog',
+			title: 'VAA先锋音讯企业官网',
 			meta: [
 				{ name: 'viewport', content: 'width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no' },
-				{ name: 'description', content: 'nuxt3项目实战之alone-blog：nuxt3+tailwindcss' }
+				{ name: 'description', content: 'VAA先锋音讯企业官网' }
 			]
 		}
 	},
