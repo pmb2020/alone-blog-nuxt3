@@ -5,7 +5,7 @@
 			<Meta name="description" :content="title" />
 			<!-- <Style type="text/css" children="body { background-color: green; }" /> -->
 		</Head>
-		<AloneBanner :data='bannerList' />
+		<AloneBanner class="h-44 md:h-auto" :data='bannerList' />
 		<p class="text-3xl md:text-green-500 m-20">这是nuxt3+tailwindcss3新项目</p>
 		<AlonePagination />
 		<nuxt-link to="/about">关于我们</nuxt-link><br>
