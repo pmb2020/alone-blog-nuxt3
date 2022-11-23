@@ -12,13 +12,13 @@
 	const navIndex = ref(0)
 	const navList = ref([
 		{name:'首页',link:'/'},
-		{name:'产品中心',link:'/',children:[
+		{name:'产品中心',link:'/product',children:[
 			{name:'产品1号',link:'/'},
 			{name:'产品2号',link:'/'},
 			{name:'产品3号',link:'/'},
 		]},
-		{name:'解决方案',link:'/'},
-		{name:'用户案例',link:'/'},
+		{name:'解决方案',link:'/solution'},
+		{name:'用户案例',link:'/example'},
 		{name:'新闻中心',link:'/news'},
 		{name:'关于我们',link:'/about'},
 	])
