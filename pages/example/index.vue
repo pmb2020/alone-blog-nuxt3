@@ -6,7 +6,7 @@
 				您所在的位置：首页 / 用户案例
 			</div>
 			<div class="mt-6">
-				<div class="mb-16" v-for="(pItem,pIndex) in data" :key="pIndex">
+				<div class="mb-10 md:mb-16" v-for="(pItem,pIndex) in data" :key="pIndex">
 					<h3 class="example-title" style="text-align: center;">{{pItem.name}}</h3>
 					<ul class="grid grid-cols-3 md:grid-cols-6 gap-4">
 						<li class="shadow-lg rounded-md mb-4" v-for="(item,index) in pItem.children" :key="index">
