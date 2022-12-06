@@ -7,7 +7,7 @@
 			</div>
 			<div class="flex items-center">
 				<div class="bar"></div>
-				<p class="text-xs md:text-lg text-slate-400">查看更多></p>
+				<p class="text-xs md:text-lg text-slate-400"><nuxt-link to="/product">查看更多></nuxt-link></p>
 			</div>
 		</div>
 		<div class="grid grid-cols-3 gap-10">

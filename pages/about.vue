@@ -1,7 +1,7 @@
 <template>
 	<div class="about">
 		<PageTop title="关于我们" />
-		<div class="container mx-auto mt-12">
+		<div class="al-container mx-auto mt-12">
 			<article class="leading-9">
 				<h3 class="text-4xl mb-6 font-semibold">公司简介</h3>
 				<p>先锋音讯公司，于2006年8月在北京海淀区中关村高科技园区创立。先锋音讯始终坚持专心、专一、专注于AI技术研发与客户服务；先后荣获“国家高新技术企业”、“北京中关村科技企业家协会副会长单位”等称号，拥有专利及软件著作权证书20余项，获得ISO质量管理体系认证。
