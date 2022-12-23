@@ -4,12 +4,14 @@
 			<li v-for="(nav,index) in data" :key="index">
 				<div class="nav-item">
 					<div class="nav-item-title">
-						<nuxt-link  @click="navClick(index)" :class="{'active':navIndex==index}" :to="nav.link">{{nav.name}}</nuxt-link>
+						<nuxt-link :class="{'active':routePath==nav.link}" :to="nav.link">
+							{{nav.name}}</nuxt-link>
 					</div>
 					<!-- 下拉菜单 -->
 					<div v-if="nav.children" class="dropdown-content">
 						<div class="dropdown-menu">
-							<div v-for="(navChildren,navChildrenIndex) in nav.children" class="menuItem" :key="navChildrenIndex">
+							<div v-for="(navChildren,navChildrenIndex) in nav.children" class="menuItem"
+								:key="navChildrenIndex">
 								<nuxt-link :to="navChildren.link">{{navChildren.name}}</nuxt-link>
 							</div>
 						</div>
@@ -20,7 +22,8 @@
 		<!-- 移动端 -->
 		<ul class="nav-m" :class="{'collapse':isCollapse}">
 			<li v-for="(nav,index) in data" :key="index">
-				<nuxt-link  @click="navClick(index)" :class="{'active':navIndex==index}" :to="nav.link">{{nav.name}}</nuxt-link>
+				<nuxt-link :class="{'active':routePath==nav.link}" :to="nav.link">{{nav.name}}
+				</nuxt-link>
 			</li>
 		</ul>
 		<button @click="isCollapse ? isCollapse=false : isCollapse=true">三</button>
@@ -28,35 +31,40 @@
 </template>
 
 <script setup>
-	const {data} = defineProps(['data'])
-	const navIndex = ref(0)
+	const route = useRoute()
+	const {
+		data
+	} = defineProps(['data'])
+	const routePath = ref('')
 	const isCollapse = ref(true)
-	onMounted(() => {
-		navIndex.value = localStorage.getItem('navIndex') || 0
+	watch(() => route.path, (path) => {
+		routePath.value = path
 	})
-	const navClick = (index) => {
-		localStorage.setItem('navIndex', index)
-		navIndex.value = index
-		isCollapse.value = true
-	}
+	onMounted(() => {
+		routePath.value = route.path
+	})
 </script>
 
 <style lang="scss" scoped>
 	$header-height: 80px;
+
 	@media (max-width:576px) {
-		.nav-bar{
-			.nav{
+		.nav-bar {
+			.nav {
 				display: none !important;
 			}
-			.nav-m{
+
+			.nav-m {
 				display: block !important;
 			}
-			button{
+
+			button {
 				display: block !important;
 			}
 		}
 	}
-	.nav-m{
+
+	.nav-m {
 		position: absolute;
 		z-index: 99;
 		background-color: #fff;
@@ -65,46 +73,55 @@
 		top: $header-height;
 		padding: 1rem;
 		overflow: hidden;
-		a{
+
+		a {
 			padding: 0.8rem 1rem;
 			display: inline-block;
 		}
-		.active{
+
+		.active {
 			color: $primary-color;
 		}
 	}
-	.nav-bar{
-		.nav-m{
+
+	.nav-bar {
+		.nav-m {
 			display: none;
 		}
-		button{
+
+		button {
 			display: none;
 		}
 	}
-	
+
 	.nav {
 		position: relative;
 		display: flex;
 		width: 100%;
 		height: $header-height;
 		line-height: $header-height;
+
 		.nav-item {
 			position: relative;
 			margin: 0 20px;
 			cursor: pointer;
+
 			// transition: all 0.3s linear;
-			a{
+			a {
 				display: block;
 			}
+
 			.nav-item-title {
 				position: relative;
 				display: block;
 				height: inherit;
 				width: inherit;
-				.active{
+
+				.active {
 					color: $primary-color;
 					border-bottom: 2px solid $primary-color;
 				}
+
 				&::before {
 					content: "";
 					position: absolute;
@@ -120,6 +137,7 @@
 
 				&:hover {
 					color: $primary-color;
+
 					&::before {
 						transform: scale(1);
 					}
